@@ -8,7 +8,8 @@ const getPizzaList = () => {
     })
     .catch(err => {
       console.log(err);
-    })
+    });
+};
 
 const printPizza = ({ _id, pizzaName, toppings, size, commentCount, createdBy, createdAt }) => {
   const pizzaCard = `
@@ -35,8 +36,6 @@ const printPizza = ({ _id, pizzaName, toppings, size, commentCount, createdBy, c
   `;
 
   $pizzaList.innerHTML += pizzaCard;
-
-  }
 };
 
 getPizzaList();
